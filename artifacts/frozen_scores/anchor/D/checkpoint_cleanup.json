@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "component": "D",
+  "deleted_checkpoint": "/hy-tmp/xunfei-hyena-id/v10/outputs/v10_3_full_components/D/model.pt",
+  "deleted_checkpoint_sha256": "3facb5f48f0f31d724d343fcf9ba68358617ab2eb160e89a306d69eb1bf9aa7b",
+  "reason": "V10.3-full sequential lifecycle after verified inference-only recovery and raw-score extraction",
+  "recoverability": "retrain exactly from the declared legal initializer and fixed recipe"
+}

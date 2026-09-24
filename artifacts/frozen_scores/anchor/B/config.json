@@ -1,0 +1,257 @@
+{
+  "version": "V10.3-full",
+  "component": "B",
+  "component_name": "V4.8 centered foreground token",
+  "competition_root": "/hy-tmp/xunfei-hyena-id/competition",
+  "manifest": "/hy-tmp/xunfei-hyena-id/benchmark/artifacts/folds.csv",
+  "template": "/hy-tmp/xunfei-hyena-id/competition/submission_template.csv",
+  "output_dir": "/hy-tmp/xunfei-hyena-id/v10/outputs/v10_3_full_components/B",
+  "model_variant": "dinov3_huge_plus_patch_mgn_cov_adapt_geosie2_ptoposupcon_fgtoken",
+  "model_name": "vit_huge_plus_patch16_dinov3.lvd1689m_patch_mgn_geosie2_cov64_fgtoken_ptoposupcon_adapt64s10",
+  "pretraining_source": "https://huggingface.co/timm/vit_huge_plus_patch16_dinov3.lvd1689m",
+  "init_checkpoint": null,
+  "competition_checkpoint_loaded": false,
+  "external_reid_initialization": {},
+  "augmentation_profile": "arbase_source_jitter",
+  "sampler_profile": "balanced_cross_part",
+  "sampler_exposure": {
+    "epochs": 36,
+    "counts": [
+      49691,
+      48899,
+      48866
+    ],
+    "fractions": [
+      0.3369886610243056,
+      0.3316175672743056,
+      0.3313937717013889
+    ],
+    "batch_part_count_histogram": {
+      "19/21/24": 2,
+      "19/22/23": 1,
+      "20/19/25": 2,
+      "20/20/24": 8,
+      "20/21/23": 12,
+      "20/22/22": 15,
+      "20/23/21": 7,
+      "21/19/24": 5,
+      "21/20/23": 57,
+      "21/21/22": 546,
+      "21/22/21": 541,
+      "21/23/20": 42,
+      "22/18/24": 3,
+      "22/19/23": 12,
+      "22/20/22": 91,
+      "22/21/21": 584,
+      "22/22/20": 125,
+      "22/23/19": 23,
+      "22/24/18": 2,
+      "23/18/23": 3,
+      "23/19/22": 14,
+      "23/20/21": 58,
+      "23/21/20": 65,
+      "23/22/19": 28,
+      "23/23/18": 4,
+      "23/24/17": 1,
+      "24/16/24": 1,
+      "24/17/23": 1,
+      "24/18/22": 3,
+      "24/19/21": 5,
+      "24/20/20": 21,
+      "24/21/19": 6,
+      "24/22/18": 5,
+      "24/23/17": 1,
+      "25/18/21": 1,
+      "25/19/20": 2,
+      "25/20/19": 6,
+      "27/18/19": 1
+    }
+  },
+  "foreground_mode": "sam_part_view",
+  "train_foreground_mask_artifact": {
+    "root": "/hy-tmp/xunfei-hyena-id/v2/artifacts/v2_63_p8_full/sam2_foreground",
+    "index_sha256": "53fbb173a1ace9a5cdbf8054f7c7b5747e9e30d639940ad13d4f2e5304be8687",
+    "rows": 4067,
+    "valid": 3407,
+    "valid_fraction": 0.8377182198180477,
+    "by_part": {
+      "head": {
+        "rows": 1963,
+        "valid": 1551,
+        "valid_fraction": 0.7901171676006113
+      },
+      "left_body": {
+        "rows": 1056,
+        "valid": 957,
+        "valid_fraction": 0.90625
+      },
+      "right_body": {
+        "rows": 1048,
+        "valid": 899,
+        "valid_fraction": 0.857824427480916
+      }
+    },
+    "mask_hashes_verified": true
+  },
+  "train_foreground_summary": {
+    "area_range": [
+      0.1,
+      0.9
+    ],
+    "by_part": {
+      "head": {
+        "area_quantiles": {
+          "0.0": 0.10167526383039137,
+          "0.1": 0.48360919540229885,
+          "0.5": 0.6062337662337662,
+          "0.9": 0.7781737741182254,
+          "1.0": 0.8974816922185344
+        },
+        "methods": {
+          "box_center": 476,
+          "center": 1075
+        },
+        "rows": 1963,
+        "score_quantiles": {
+          "0.0": 0.8515625,
+          "0.1": 0.87890625,
+          "0.5": 0.94921875,
+          "0.9": 0.98046875,
+          "1.0": 0.9921875
+        },
+        "valid": 1551,
+        "valid_fraction": 0.7901171676006113
+      },
+      "left_body": {
+        "area_quantiles": {
+          "0.0": 0.20060516699936776,
+          "0.1": 0.44335201461362594,
+          "0.5": 0.546614815640797,
+          "0.9": 0.6993147598497227,
+          "1.0": 0.8990724408866083
+        },
+        "methods": {
+          "box_center": 394,
+          "center": 563
+        },
+        "rows": 1056,
+        "score_quantiles": {
+          "0.0": 0.8515625,
+          "0.1": 0.88671875,
+          "0.5": 0.953125,
+          "0.9": 0.98046875,
+          "1.0": 0.98828125
+        },
+        "valid": 957,
+        "valid_fraction": 0.90625
+      },
+      "right_body": {
+        "area_quantiles": {
+          "0.0": 0.19841461488692924,
+          "0.1": 0.45131888489546684,
+          "0.5": 0.5429356239639418,
+          "0.9": 0.6876113108467597,
+          "1.0": 0.8979163729711798
+        },
+        "methods": {
+          "box_center": 303,
+          "center": 596
+        },
+        "rows": 1048,
+        "score_quantiles": {
+          "0.0": 0.8515625,
+          "0.1": 0.890625,
+          "0.5": 0.95703125,
+          "0.9": 0.98046875,
+          "1.0": 0.9921875
+        },
+        "valid": 899,
+        "valid_fraction": 0.857824427480916
+      }
+    },
+    "elapsed_seconds": 248.29476380348206,
+    "fold": null,
+    "generator_source_sha256": "e7ed749d7efb03da61f80a7f99de59a389c4b4f49d33e210fb5731d166fd7a59",
+    "index_sha256": "53fbb173a1ace9a5cdbf8054f7c7b5747e9e30d639940ad13d4f2e5304be8687",
+    "manifest_sha256": "0470a4bb4630061ef06e92c50a74cb15ba457e476714294872ec426239a1ee6f",
+    "minimum_score": 0.85,
+    "peak_allocated_gb": 1.9401798248291016,
+    "rows": 4067,
+    "sam2_checkpoint_sha256": "7402e0d864fa82708a20fbd15bc84245c2f26dff0eb43a4b5b93452deb34be69",
+    "sam2_config_sha256": "f932eac1c6241e910031b2f000a81cd9f8a8d4896e2277ab5ffb721f378b188d",
+    "sam2_source_commit": "2b90b9f5ceec907a1c18123530e92e794ad901a4",
+    "scope": "all_train",
+    "valid": 3407,
+    "valid_fraction": 0.8377182198180477
+  },
+  "test_foreground_mask_artifact": {
+    "root": "/hy-tmp/xunfei-hyena-id/v4/artifacts/v4_2_full/sam2_foreground_test",
+    "index_sha256": "7aba1a44ec180df5b6b6257807ace7a81b693e3212efdef1d7707b7f005a2750",
+    "summary_sha256": "fdac565f377be47015f13be02d50f51a900b1642d1cd05ca0e3c426d6b80c105",
+    "rows": 1641,
+    "valid": 1399,
+    "mask_hashes_verified": true
+  },
+  "released_crop_geometry_stats": {
+    "feature_names": [
+      "log_crop_pixels",
+      "log_crop_aspect"
+    ],
+    "mean": [
+      12.740275201734173,
+      -0.05243111018209716
+    ],
+    "std": [
+      1.3066422240907318,
+      0.2819958634715239
+    ],
+    "rows": 4067
+  },
+  "train_epochs": 36,
+  "scheduler_horizon_epochs": 48,
+  "warmup_epochs": 3,
+  "image_size": 448,
+  "embedding_dim": 512,
+  "local_queries": 4,
+  "identities_per_batch": 16,
+  "images_per_identity": 4,
+  "freeze_blocks": 24,
+  "freeze_stages": 2,
+  "backbone_lr": 2.4e-05,
+  "head_lr": 0.0003,
+  "layer_decay": 0.82,
+  "weight_decay": 0.05,
+  "arc_scale": 30.0,
+  "arc_margin": 0.2,
+  "part_delta_scale": 0.2,
+  "label_smoothing": 0.05,
+  "shared_ce_weight": 0.5,
+  "supcon_weight": 0.15,
+  "triplet_weight": 0.3,
+  "supcon_temperature": 0.1,
+  "triplet_scale": 0.1,
+  "grad_clip": 1.0,
+  "optimizer": "adamw",
+  "amp_initial_scale": 1024.0,
+  "seed": 20260719,
+  "tta_flip": false,
+  "gallery_decoder": false,
+  "full_epoch_rule": "component B fold0 selected human epoch 36 fixed before test inference",
+  "cv_reference_non_tta": 0.710131541603504,
+  "manifest_sha256": "0470a4bb4630061ef06e92c50a74cb15ba457e476714294872ec426239a1ee6f",
+  "template_sha256": "274c7db5bbc34763e1081dcd21b88abf0e087b761d13beb8b35fdc464d76f2f8",
+  "source_sha256": {
+    "train_v10_3_full_component.py": "1a99534ff4dba6fea0514d3aea90e7d821bac644199f7b0b019533253e21550d",
+    "model.py": "c758b402ad1ac21885fdbf982b7ebae2777d3649f215739615e92c556f3ee184",
+    "data.py": "0a85474cde52f3e19b5a641fe0a2c314c1c5cecce876ad628f46a34247ed4754",
+    "engine.py": "9bf58fa1b879fba9499bbd8fe373dcf677338aee36227c2e7222c5b348eea557",
+    "losses.py": "42a20dc6ba7243d05678efcf0f9b8731787495d9547fd3c0bfc7ca0a91f6de28",
+    "train_cv.py": "2b30111fff4f3c6a802a08248ec37c73432b2597d7015c6cd424dbb34e428f35"
+  },
+  "train_samples": 4067,
+  "test_samples": 1641,
+  "train_steps_per_epoch": 64,
+  "workers": 8,
+  "eval_batch_size": 20,
+  "torch_version": "2.9.1+cu128"
+}

@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "updated": "2026-08-07",
+  "sources": {
+    "DogFaceNet_224resized": {
+      "status": "admitted_file_audit_pass",
+      "species": ["dog"],
+      "identity_task": "individual dog face identification",
+      "record": "https://zenodo.org/records/12578449",
+      "api": "https://zenodo.org/api/records/12578449",
+      "archive": "DogFaceNet_224resized.zip",
+      "archive_bytes": 75571850,
+      "archive_md5": "010c207e202bb499039452aa7363b015",
+      "archive_sha256": "b3b335180bfd8d18b17e13601c9b0fa9c7c92bf9c18d64fe2999597f2e71f871",
+      "license": "CC-BY-4.0",
+      "declared_images": 8363,
+      "declared_identities": 1393,
+      "prepared_manifest_sha256": "f45bbc40bf36f9cfd7007d39ae9a365ea9ed707d658ffe2cdd350fa33a7499dd",
+      "prepared_audit_sha256": "6350ff80129e01eed4cc20cec55ecc16ee99083a56952b038e3bd64bd1d2a3e5",
+      "cross_identity_exact_conflicts": 0,
+      "exact_official_train_test_pixel_overlap": 0,
+      "hyena_or_hyenaid": false,
+      "wildbook_or_competition_source": false
+    },
+    "PetFace_Dog": {
+      "status": "blocked_pending_access_and_usage_permission",
+      "species": ["dog"],
+      "identity_task": "individual animal face identification",
+      "project": "https://dahlian00.github.io/PetFacePage/",
+      "access": "Google form; dataset states research purposes only",
+      "hyena_or_hyenaid": false,
+      "wildbook_or_competition_source": false,
+      "used_by_v7": false
+    }
+  },
+  "forbidden_sources": [
+    "HyenaID2022",
+    "SpottedHyenaID109",
+    "SpottedHyenaID415",
+    "African Carnivore Wildbook",
+    "MegaDescriptor",
+    "MiewID",
+    "WildlifeReID-10k merged archive"
+  ]
+}

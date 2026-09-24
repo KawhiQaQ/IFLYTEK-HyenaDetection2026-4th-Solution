@@ -1,0 +1,78 @@
+project: hyena-individual-identification
+seed: 20260719
+input_size: 448
+num_train_images: 4067
+num_identities: 255
+inference: non_tta_single_forward
+
+training:
+  batch_sampler:
+    identities_per_batch: 16
+    images_per_identity: 4
+  optimizer:
+    backbone_lr: 2.4e-5
+    head_lr: 3.0e-4
+    layer_decay: 0.82
+    weight_decay: 0.05
+  losses:
+    arcface_scale: 30.0
+    arcface_margin: 0.20
+    shared_ce_weight: 0.50
+    supcon_weight: 0.15
+    triplet_weight: 0.30
+    label_smoothing: 0.05
+
+anchor_components:
+  head_observation_dinov3_huge_plus:
+    backbone: dinov3_huge_plus_patch16
+    role: head_observation_specialist
+    epochs: 28
+  topology_supcon_dinov3_huge_plus:
+    backbone: dinov3_huge_plus_patch16
+    role: topology_supcon_anchor
+    epochs: 37
+  foreground_token_dinov3_huge_plus:
+    backbone: dinov3_huge_plus_patch16
+    role: foreground_token
+    epochs: 36
+  source_aware_queue_dinov3_huge_plus:
+    backbone: dinov3_huge_plus_patch16
+    role: source_aware_queue2048
+    epochs: 32
+  dogface_transfer_dinov3_huge_plus:
+    backbone: dinov3_huge_plus_patch16
+    role: dogface_stage_a_representation_transfer
+    epochs: 33
+  dual_level_dinov3_convnext_large:
+    backbone: dinov3_convnext_large
+    role: convolutional_complement
+    epochs: 24
+
+anchor_fusion:
+  head:
+    source_aware_queue_dinov3_huge_plus: 0.50
+    head_observation_dinov3_huge_plus: 0.20
+    dogface_transfer_dinov3_huge_plus: 0.10
+    dual_level_dinov3_convnext_large: 0.20
+  left_body:
+    source_aware_queue_dinov3_huge_plus: 0.25
+    topology_supcon_dinov3_huge_plus: 0.5625
+    foreground_token_dinov3_huge_plus: 0.1875
+  right_body:
+    source_aware_queue_dinov3_huge_plus: 0.75
+    topology_supcon_dinov3_huge_plus: 0.25
+
+complementary_components:
+  bioclip_body_residual:
+    backbone: bioclip_vit_b16_visual_only
+    role: body_residual_direction
+    epochs: 14
+  quality_view_dinov3_huge_plus:
+    backbone: dinov3_huge_plus_patch16
+    role: head_quality_view_residual_direction
+    epochs: 20
+
+final_score:
+  head: 1.30 * anchor - 0.30 * quality_view_dinov3_huge_plus
+  left_body: 1.15 * anchor - 0.15 * bioclip_body_residual
+  right_body: 1.15 * anchor - 0.15 * bioclip_body_residual

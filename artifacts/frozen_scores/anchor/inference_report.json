@@ -1,0 +1,70 @@
+{
+  "component_hashes": {
+    "A": {
+      "cleanup": "2fc955b0e9c0190547ed6eed48219f676a5fdbcf7ba8e95b9fcdc756ab160785",
+      "report": "2cba43e322f78cefb15613c7b1bacf41b3a1af6324f4a86f6c26ab99186447cc",
+      "scores": "6f97a05b0f6f4adce23dd3c5d700584d487ec6a6fdae4253b05d132ffeb82b36"
+    },
+    "B": {
+      "cleanup": "2eb982df7e6534df86bccf2d52600f7641bd5209d7df19f82899eda2eb95a477",
+      "report": "5f047940d696572028c1a0528541282029b52bcc31592b17aa091ee61996a976",
+      "scores": "4652fc4d55eab90be3bc869fa61c89a0f5b4b24ddf27dca4ee6261308046392d"
+    },
+    "C": {
+      "cleanup": "9d53fb2612a0fc641a97305091a0d34c2f368f966c57b246b0c89217e81e0544",
+      "report": "bfc6389221ac27d9e2eade8b096ae9dfbc7d566b485f4f92675e432b4420110a",
+      "scores": "3f96693b793e5ba0c2cbbc4fa6860e0a8d771a95061a93bbb73deb7c7495eb3e"
+    },
+    "D": {
+      "cleanup": "342092f2fcc30c11a5c1e45f6deeb32c55c2de5e2baaf586b8e85f1d56111120",
+      "report": "6ad38ea5f025bd5fc56dc207e4a22eb7c9eb298e3d7f12d1c5d7bc0f9b3cf166",
+      "scores": "875d94cd91915ed391cb758ed123b7b5ea000f83d9830889318c52369c09ad04"
+    },
+    "H": {
+      "cleanup": "0792dba2afb5545a0b48588e25b72598c6ac29b34e704ea67a6caa948333c2e0",
+      "report": "f92f7dfd34874edd1d07f65e99341cffb46217793aacabd602a7037e33c08654",
+      "scores": "bdd37e425dfc17cf62f925dc52026a597c32a20c438d1a7f5ef098f41a36a796"
+    },
+    "Q": {
+      "cleanup": "5662728e6bf02b99a04765ce5a25ec2bd660d04a4a2a84d89dc0600409f9ea52",
+      "report": "fc86b53e6affc007013c0707447ac253c9c20f445dac2d1ce79acb643c40cf42",
+      "scores": "534a8dbd426c5dacf6ddd759fe584aafb87e80160c128c3b364eca1758793b68"
+    }
+  },
+  "decoder": "part-aware raw-score convex fusion then argmax",
+  "output_hashes": {
+    "fused_scores": "5eadacd35f66732cd69a785a998d2b444703fc163a44e3842897df001f7c8e40",
+    "submission_csv": "5a589bcfea95505a97ace6ceb89325533d59e8d43dc311ccd544c68c76f14d6e",
+    "submission_zip": "8a2720b33c05b0be3788b99cb28f15f65ed7ed372f448889369c8cc009c7d437",
+    "test_predictions": "e02ea56ffd895dd5724dfad04136a356768759774e8398ab9b6ca32e2a4fcfdb"
+  },
+  "status": "PASS",
+  "template_sha256": "274c7db5bbc34763e1081dcd21b88abf0e087b761d13beb8b35fdc464d76f2f8",
+  "test_rows": 1641,
+  "train_rows_per_component": 4067,
+  "tta_flip": false,
+  "unique_predicted_ids": 242,
+  "unique_predicted_ids_per_part": {
+    "head": 208,
+    "left_body": 220,
+    "right_body": 219
+  },
+  "version": "V10.3-full",
+  "weights": {
+    "head": {
+      "C": 0.2,
+      "D": 0.1,
+      "H": 0.2,
+      "Q": 0.5
+    },
+    "left_body": {
+      "A": 0.5625,
+      "B": 0.1875,
+      "Q": 0.25
+    },
+    "right_body": {
+      "A": 0.25,
+      "Q": 0.75
+    }
+  }
+}

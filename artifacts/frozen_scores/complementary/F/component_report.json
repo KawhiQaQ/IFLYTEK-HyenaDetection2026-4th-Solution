@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "version": "V11.8-full",
+  "component": "F",
+  "component_name": "V10.4 legal generic BioCLIP-B visual component",
+  "train_epochs": 14,
+  "train_rows": 4067,
+  "test_rows": 1641,
+  "tta_flip": false,
+  "anonymous_test_train_rows": 0,
+  "competition_checkpoint_loaded": false,
+  "in_memory_model_state_sha256": "bf357aeec64a1733841ade2e3a2297845de42a49a99d02dfafc8bbc064199607",
+  "checkpoint_written": false,
+  "elapsed_seconds": 3760.5285098552704,
+  "component_scores_sha256": "5d7af8abdc8ddc3a44bb3e8154526f44e73e01ecfe3b722294af0bcd7ad4dc66",
+  "test_predictions_sha256": "16f1602ed76cdfa6325bb314fd90e906b31e1e8fd586c6aaf94ef20dd6731834",
+  "config_sha256": "3dee7c71164759323675581ad1ba2722bd915d88545e37357dca638cc0f1d58e",
+  "train_log_sha256": "1f3b11932ca7e9104e4f9b019830f8d763ca13a07d019e02621a3ef9d15a897c",
+  "train_mask_index_sha256": "53fbb173a1ace9a5cdbf8054f7c7b5747e9e30d639940ad13d4f2e5304be8687",
+  "test_mask_index_sha256": "7aba1a44ec180df5b6b6257807ace7a81b693e3212efdef1d7707b7f005a2750"
+}

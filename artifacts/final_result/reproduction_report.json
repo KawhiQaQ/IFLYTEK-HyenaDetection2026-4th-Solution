@@ -1,0 +1,45 @@
+{
+  "alpha": 3.0,
+  "equivalent_body": "1.15*V10.3-0.15*F",
+  "equivalent_head": "1.30*V10.3-0.30*K",
+  "fold0": {
+    "final_score": 0.7169977394457652,
+    "head": 0.5494699102337991,
+    "left_body": 0.830376984126984,
+    "right_body": 0.7711463239765126
+  },
+  "fold0_changed_vs_v10": 35,
+  "formula": "4*V10.3-3*V11.R",
+  "inputs": {
+    "v10/artifacts/v10_3_convnext_head_fusion/selected_scores.pt": "ecaf00cdf02710470d35f5d54c1a467a746eec2224ae1199041bc0eca9207337",
+    "v10/outputs/v10_3_full_submission/fused_scores.pt": "5eadacd35f66732cd69a785a998d2b444703fc163a44e3842897df001f7c8e40",
+    "v10/outputs/v10_3_full_submission/submission.csv": "5a589bcfea95505a97ace6ceb89325533d59e8d43dc311ccd544c68c76f14d6e",
+    "v10/outputs/v10_3_full_submission/test_predictions.csv": "e02ea56ffd895dd5724dfad04136a356768759774e8398ab9b6ca32e2a4fcfdb",
+    "v11/artifacts/historical_residual_complementarity/combined_FK/scores.pt": "4a20f6e53cfb4e184ad6028358e171a9bf0e7eba4391e8f9a522277f385c2496",
+    "v11/outputs/v11_8_full_components/F/component_scores.pt": "5d7af8abdc8ddc3a44bb3e8154526f44e73e01ecfe3b722294af0bcd7ad4dc66",
+    "v11/outputs/v11_8_full_components/K/component_scores.pt": "bc3b6758f39de8f6271706ab88a1f6dfb153e04d43790d2c4e2eb8a1ddf8a7e7"
+  },
+  "lb_evidence": {
+    "V10.3": 0.77327,
+    "V15.1_V11R": 0.77024,
+    "secant_linear_target_not_guaranteed": 0.78236
+  },
+  "outputs": {
+    "scores": "/Users/kawhi/Documents/xunfei-dog/v15/outputs/V15.6-reverse-V11R-a3/reverse_scores.pt",
+    "scores_sha256": "c308ec7753baa77234b721cd13c3ad200dd7562e47d74e532d2cf33c49d40c61",
+    "submission_csv": "/Users/kawhi/Documents/xunfei-dog/v15/outputs/V15.6-reverse-V11R-a3/submission.csv",
+    "submission_csv_sha256": "a37db3534c9476228799dd5acc8ee749cd21040980235f2fc2880820d632d678",
+    "submission_zip": "/Users/kawhi/Documents/xunfei-dog/v15/outputs/V15.6-reverse-V11R-a3/V15.6-reverse-V11R-a3.zip",
+    "submission_zip_sha256": "96227ff8c19afa29e3e1c45f51dc252555df548fa372e2ce289f8425779ab7f5"
+  },
+  "status": "PASS",
+  "test_changed_vs_v10": 58,
+  "test_changed_vs_v10_by_part": {
+    "head": 45,
+    "left_body": 2,
+    "right_body": 11
+  },
+  "test_labels_or_identity_used": false,
+  "test_rows": 1641,
+  "version": "V15.6-reverse-V11R-a3"
+}

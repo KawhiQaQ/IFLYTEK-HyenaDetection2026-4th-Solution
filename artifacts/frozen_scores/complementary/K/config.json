@@ -1,0 +1,179 @@
+{
+  "version": "V11.8-full",
+  "component": "K",
+  "component_name": "V11.3 body-only deterministic quality view",
+  "model_variant": "dinov3_huge_plus_patch_mgn_cov_adapt_geosie2_ptoposupcon_queue2048",
+  "pretraining_source": "https://huggingface.co/timm/vit_huge_plus_patch16_dinov3.lvd1689m",
+  "external_generic_checkpoint_sha256": null,
+  "init_checkpoint": null,
+  "competition_checkpoint_loaded": false,
+  "train_epochs": 20,
+  "scheduler_horizon_epochs": 48,
+  "full_epoch_rule": "fold0 selected human epoch 20 fixed before full training",
+  "augmentation_profile": "arbase_source_jitter_quality_body",
+  "sampler_profile": "balanced_cross_part",
+  "foreground_mode": "sam_part_view",
+  "train_foreground_mask_artifact": {
+    "root": "/hy-tmp/xunfei-hyena-id/v2/artifacts/v2_63_p8_full/sam2_foreground",
+    "index_sha256": "53fbb173a1ace9a5cdbf8054f7c7b5747e9e30d639940ad13d4f2e5304be8687",
+    "rows": 4067,
+    "valid": 3407,
+    "valid_fraction": 0.8377182198180477,
+    "by_part": {
+      "head": {
+        "rows": 1963,
+        "valid": 1551,
+        "valid_fraction": 0.7901171676006113
+      },
+      "left_body": {
+        "rows": 1056,
+        "valid": 957,
+        "valid_fraction": 0.90625
+      },
+      "right_body": {
+        "rows": 1048,
+        "valid": 899,
+        "valid_fraction": 0.857824427480916
+      }
+    },
+    "mask_hashes_verified": true
+  },
+  "train_foreground_summary": {
+    "area_range": [
+      0.1,
+      0.9
+    ],
+    "by_part": {
+      "head": {
+        "area_quantiles": {
+          "0.0": 0.10167526383039137,
+          "0.1": 0.48360919540229885,
+          "0.5": 0.6062337662337662,
+          "0.9": 0.7781737741182254,
+          "1.0": 0.8974816922185344
+        },
+        "methods": {
+          "box_center": 476,
+          "center": 1075
+        },
+        "rows": 1963,
+        "score_quantiles": {
+          "0.0": 0.8515625,
+          "0.1": 0.87890625,
+          "0.5": 0.94921875,
+          "0.9": 0.98046875,
+          "1.0": 0.9921875
+        },
+        "valid": 1551,
+        "valid_fraction": 0.7901171676006113
+      },
+      "left_body": {
+        "area_quantiles": {
+          "0.0": 0.20060516699936776,
+          "0.1": 0.44335201461362594,
+          "0.5": 0.546614815640797,
+          "0.9": 0.6993147598497227,
+          "1.0": 0.8990724408866083
+        },
+        "methods": {
+          "box_center": 394,
+          "center": 563
+        },
+        "rows": 1056,
+        "score_quantiles": {
+          "0.0": 0.8515625,
+          "0.1": 0.88671875,
+          "0.5": 0.953125,
+          "0.9": 0.98046875,
+          "1.0": 0.98828125
+        },
+        "valid": 957,
+        "valid_fraction": 0.90625
+      },
+      "right_body": {
+        "area_quantiles": {
+          "0.0": 0.19841461488692924,
+          "0.1": 0.45131888489546684,
+          "0.5": 0.5429356239639418,
+          "0.9": 0.6876113108467597,
+          "1.0": 0.8979163729711798
+        },
+        "methods": {
+          "box_center": 303,
+          "center": 596
+        },
+        "rows": 1048,
+        "score_quantiles": {
+          "0.0": 0.8515625,
+          "0.1": 0.890625,
+          "0.5": 0.95703125,
+          "0.9": 0.98046875,
+          "1.0": 0.9921875
+        },
+        "valid": 899,
+        "valid_fraction": 0.857824427480916
+      }
+    },
+    "elapsed_seconds": 253.5238561630249,
+    "fold": null,
+    "generator_source_sha256": "3ba258195aac455b4f05e1e01d5cb1dde01ecff26d095b5a3b333cedbd736cee",
+    "index_sha256": "53fbb173a1ace9a5cdbf8054f7c7b5747e9e30d639940ad13d4f2e5304be8687",
+    "manifest_sha256": "0470a4bb4630061ef06e92c50a74cb15ba457e476714294872ec426239a1ee6f",
+    "minimum_score": 0.85,
+    "peak_allocated_gb": 1.9401798248291016,
+    "rows": 4067,
+    "sam2_checkpoint_sha256": "7402e0d864fa82708a20fbd15bc84245c2f26dff0eb43a4b5b93452deb34be69",
+    "sam2_config_sha256": "f932eac1c6241e910031b2f000a81cd9f8a8d4896e2277ab5ffb721f378b188d",
+    "sam2_source_commit": "2b90b9f5ceec907a1c18123530e92e794ad901a4",
+    "scope": "all_train",
+    "template_sha256": null,
+    "valid": 3407,
+    "valid_fraction": 0.8377182198180477
+  },
+  "test_foreground_mask_artifact": {
+    "root": "/hy-tmp/xunfei-hyena-id/v4/artifacts/v4_2_full/sam2_foreground_test",
+    "index_sha256": "7aba1a44ec180df5b6b6257807ace7a81b693e3212efdef1d7707b7f005a2750",
+    "summary_sha256": "877391035661504fcc52a03cb517d2703ed843fa295f8d67216e7a7d7ef4c038",
+    "rows": 1641,
+    "valid": 1399,
+    "mask_hashes_verified": true
+  },
+  "geometry_stats": {
+    "feature_names": [
+      "log_crop_pixels",
+      "log_crop_aspect"
+    ],
+    "mean": [
+      12.740275201734173,
+      -0.05243111018209716
+    ],
+    "std": [
+      1.3066422240907318,
+      0.2819958634715239
+    ],
+    "rows": 4067
+  },
+  "image_size": 448,
+  "identities_per_batch": 16,
+  "images_per_identity": 4,
+  "freeze_blocks": 24,
+  "backbone_lr": 2.4e-05,
+  "head_lr": 0.0003,
+  "layer_decay": 0.82,
+  "weight_decay": 0.05,
+  "seed": 20260719,
+  "tta_flip": false,
+  "manifest_sha256": "0470a4bb4630061ef06e92c50a74cb15ba457e476714294872ec426239a1ee6f",
+  "template_sha256": "274c7db5bbc34763e1081dcd21b88abf0e087b761d13beb8b35fdc464d76f2f8",
+  "source_sha256": {
+    "trainer": "05ffb0c3f198709955ae44a6aba15540aca2b35a068d36ccb859effbb31b7243",
+    "model.py": "119021cda0e810682a66e693058d4d17be80b1f6d4a6d010b3cb1511874a2a88",
+    "data.py": "2c3e8809867d32ea265b07e22aae07ea1234727793ba4b7d8c6a5af8dce20bab",
+    "engine.py": "9bf58fa1b879fba9499bbd8fe373dcf677338aee36227c2e7222c5b348eea557",
+    "losses.py": "42a20dc6ba7243d05678efcf0f9b8731787495d9547fd3c0bfc7ca0a91f6de28"
+  },
+  "train_rows": 4067,
+  "test_rows": 1641,
+  "cv_reference_non_tta": 0.6951782960144968,
+  "checkpoint_policy": "in-memory only; deterministic tensor-wise state hash"
+}

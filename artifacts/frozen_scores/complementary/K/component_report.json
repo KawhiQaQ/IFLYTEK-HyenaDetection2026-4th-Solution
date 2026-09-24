@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "version": "V11.8-full",
+  "component": "K",
+  "component_name": "V11.3 body-only deterministic quality view",
+  "train_epochs": 20,
+  "train_rows": 4067,
+  "test_rows": 1641,
+  "tta_flip": false,
+  "anonymous_test_train_rows": 0,
+  "competition_checkpoint_loaded": false,
+  "in_memory_model_state_sha256": "2e3f40ed5510b54a7e3792918ff63bcccf9c4cc7c952ac1f4ee3680160171a2a",
+  "checkpoint_written": false,
+  "elapsed_seconds": 9029.77714753151,
+  "component_scores_sha256": "bc3b6758f39de8f6271706ab88a1f6dfb153e04d43790d2c4e2eb8a1ddf8a7e7",
+  "test_predictions_sha256": "a1cc93a5e7915b63465161a8031f01eb8cf488c9bfb4829d9465b243ea4fde54",
+  "config_sha256": "0240002dd8653e1124a7345d8ee79a73cf10167447af482e40b849609731e08a",
+  "train_log_sha256": "85b0005025c00d2fa3d428fb67cd4111456c6ade711c5c81df8c9d98ba62c30d",
+  "train_mask_index_sha256": "53fbb173a1ace9a5cdbf8054f7c7b5747e9e30d639940ad13d4f2e5304be8687",
+  "test_mask_index_sha256": "7aba1a44ec180df5b6b6257807ace7a81b693e3212efdef1d7707b7f005a2750"
+}

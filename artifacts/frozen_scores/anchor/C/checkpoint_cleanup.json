@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "component": "C",
+  "deleted_checkpoint": "/hy-tmp/xunfei-hyena-id/v10/outputs/v10_3_full_components/C/model.pt",
+  "deleted_checkpoint_sha256": "f53823b6ca5d9739750b042638b3d0b346c939c659362c4f2dd0e664c2884bd3",
+  "reason": "V10.3-full sequential 8.6GB disk lifecycle after verified raw-score extraction",
+  "recoverability": "retrain exactly from the declared legal initializer and fixed recipe"
+}
