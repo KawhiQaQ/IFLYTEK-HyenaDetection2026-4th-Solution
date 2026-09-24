@@ -128,7 +128,3 @@ S_r &= 1.15A_r-0.15S_{bio}.
 - `tools/train_complementary_component.py`：两个残差分类器的训练与推理；
 - `tools/fuse_anchor.py`：基础分部位组合；
 - `tools/build_final_submission.py`：残差外推与提交生成。
-
-公开包未保留八个最终比赛 checkpoint，因此冻结 raw scores 用于精确验证已发布
-提交；模型级预测需要执行完整训练与推理流水线。该边界不会被表述为 checkpoint
-直接推理。
